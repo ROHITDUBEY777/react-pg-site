@@ -22,11 +22,11 @@ const ForgotPassword = () => {
     setError("");
     setIsLoading(true);
 
-    // Simulate sending code
+    // Simulate sending code (in production, this would call an API)
     setTimeout(() => {
       toast({
         title: "Code Sent!",
-        description: "A reset code has been sent to your email.",
+        description: `A 6-digit reset code has been sent to ${email}. (Demo: use any 6-digit code like 123456)`,
       });
       setStep(2);
       setIsLoading(false);
