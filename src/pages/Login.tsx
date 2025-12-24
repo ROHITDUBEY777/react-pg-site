@@ -21,8 +21,8 @@ const Login = () => {
     setIsLoading(true);
 
     try {
-      // Demo credentials check
-      if (email === "student@arpg.com" && password === "student123") {
+      // Accept any email with password "student123" for demo
+      if (email && password === "student123") {
         // Create a simple token
         const token = btoa(JSON.stringify({
           email: email,
@@ -41,14 +41,14 @@ const Login = () => {
 
         toast({
           title: "Login Successful!",
-          description: "Redirecting to dashboard...",
+          description: "Redirecting to book rooms...",
         });
 
         setTimeout(() => {
-          navigate("/");
+          navigate("/book-room");
         }, 1500);
       } else {
-        setError("Invalid email or password. Please try again.");
+        setError("Invalid password. Use 'student123' for demo.");
       }
     } catch (err) {
       setError("An error occurred. Please try again.");
@@ -77,7 +77,7 @@ const Login = () => {
           {/* Demo Info */}
           <div className="bg-warning/20 border border-warning/50 p-4 rounded-lg mb-6 text-sm text-warning-foreground">
             <strong className="block mb-1">📝 Demo Credentials:</strong>
-            Email: student@arpg.com<br />
+            Email: any valid email<br />
             Password: student123
           </div>
 
