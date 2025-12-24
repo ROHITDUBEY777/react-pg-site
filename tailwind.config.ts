@@ -53,6 +53,14 @@ export default {
         nav: "hsl(var(--nav-bg))",
         price: "hsl(var(--price-color))",
         "facility-icon": "hsl(var(--facility-icon))",
+        warning: {
+          DEFAULT: "hsl(var(--warning))",
+          foreground: "hsl(var(--warning-foreground))",
+        },
+        info: {
+          DEFAULT: "hsl(var(--info))",
+          foreground: "hsl(var(--info-foreground))",
+        },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",

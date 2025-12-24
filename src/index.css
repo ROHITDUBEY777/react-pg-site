@@ -42,7 +42,11 @@
 
     --radius: 0.5rem;
 
-    /* Custom colors for PG theme */
+    /* Form feedback colors */
+    --warning: 45 93% 47%;
+    --warning-foreground: 45 10% 20%;
+    --info: 210 100% 50%;
+    --info-foreground: 210 50% 20%;
     --nav-bg: 210 29% 24%;
     --hero-start: 239 84% 67%;
     --hero-end: 270 52% 49%;
