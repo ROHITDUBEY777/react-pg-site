@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { Menu, X, Home, Building, Bed, Phone, Shield } from "lucide-react";
+import { Link } from "react-router-dom";
+import { Menu, X, Home, Building, Bed, Phone, LogIn } from "lucide-react";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -43,13 +44,13 @@ const Navbar = () => {
             </li>
           ))}
           <li>
-            <button
-              onClick={() => scrollToSection("#contact")}
+            <Link
+              to="/login"
               className="bg-secondary-foreground/20 text-secondary-foreground px-4 py-2 rounded-lg hover:bg-secondary-foreground/30 transition-colors duration-300 flex items-center gap-2"
             >
-              <Shield size={16} />
-              Admin Login
-            </button>
+              <LogIn size={16} />
+              Student Login
+            </Link>
           </li>
         </ul>
 
@@ -82,13 +83,14 @@ const Navbar = () => {
               );
             })}
             <li>
-              <button
-                onClick={() => scrollToSection("#contact")}
+              <Link
+                to="/login"
                 className="bg-secondary-foreground/20 text-secondary-foreground px-4 py-2 rounded-lg hover:bg-secondary-foreground/30 transition-colors duration-300 flex items-center gap-2 w-full justify-center"
+                onClick={() => setIsMenuOpen(false)}
               >
-                <Shield size={16} />
-                Admin Login
-              </button>
+                <LogIn size={16} />
+                Student Login
+              </Link>
             </li>
           </ul>
         </div>
